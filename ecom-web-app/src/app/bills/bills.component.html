@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table" *ngIf="bill">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>CustomerId</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{bill.id}}</td>
+      <td>{{bill.billingDate|date:'dd/MM/yyyy'}}</td>
+      <td>{{bill.customerId}}</td>
+      <td>
+        <button class="btn btn-success" (click)="getProductItems(bill)">Product Items</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
